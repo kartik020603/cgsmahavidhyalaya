@@ -8,6 +8,7 @@ import { ChevronLeft, ChevronRight, Pause, Play, ShieldCheck, ArrowRight } from 
 export interface HeroSlide {
   id: string;
   image: string;
+  blurDataURL?: string;
   badge: string;
   hindiHeadline: string;
   englishTitle: string;
@@ -26,6 +27,7 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     id: "slide-1",
     image: "/images/hero/hero-slide-1.jpg?v=2",
+    blurDataURL: "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAgEAACAgIABwAAAAAAAAAAAAAAAQIDBBIRFCEiMUFD/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRE//aAAwDAQACEQMRAD8AdzG3lGyyFGPUm+gyUU/Q2ZSxbRVXlQ0XEDmiuDrXagC8jLlE/9k=",
     badge: "WELCOME TO CGS MAHAVIDYALAYA",
     hindiHeadline: "शिक्षा से संस्कार, ज्ञान से उज्ज्वल भविष्य।",
     englishTitle: "Empowering Minds. Building Futures.",
@@ -42,6 +44,7 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     id: "slide-2",
     image: "/images/hero/hero-slide-2.jpg?v=2",
+    blurDataURL: "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EAB4QAAICAgIDAAAAAAAAAAAAAAECAAMSIQQRExQi/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/8QAGREAAgMBAAAAAAAAAAAAAAAAAAEDESES/9oADAMBAAIRAxEAPwCtuYMenXcR7YbQEdYqtawIBmaak8hGIm22Tj5wka1ctwlllNeZ+BCHQUf/2Q==",
     badge: "LEADERSHIP & DIRECT MENTORSHIP",
     hindiHeadline: "प्रबंधन का सानिध्य, विद्यार्थियों को निरंतर प्रेरणा एवं मार्गदर्शन।",
     englishTitle: "Guided by Values. Inspiring Future Generations.",
@@ -58,6 +61,7 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     id: "slide-3",
     image: "/images/hero/hero-slide-3.jpg?v=2",
+    blurDataURL: "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQD/8QAHxAAAgIBBAMAAAAAAAAAAAAAAAECAwQREhQyIVJi/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAD/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAETUQIUMf/aAAwDAQACEQMRAD8AmpzpxmlNMveZFpeA6a93RGiqr9UYbD4UWNGfK+QUqqGnVAJ2Mao//9k=",
     badge: "DISCIPLINE & ACADEMIC EXCELLENCE",
     hindiHeadline: "समर्पित संकाय, सुव्यवस्थित प्रांगण एवं आदर्श शैक्षणिक वातावरण।",
     englishTitle: "Fostering Academic Excellence & Character.",
@@ -74,6 +78,7 @@ const HERO_SLIDES: HeroSlide[] = [
   {
     id: "slide-4",
     image: "/images/hero/hero-slide-4.jpg?v=2",
+    blurDataURL: "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgQA/8QAGxABAAIDAQEAAAAAAAAAAAAAAQACAwQRISL/xAAVAQEBAAAAAAAAAAAAAAAAAAACBP/EABkRAAIDAQAAAAAAAAAAAAAAAAABAgMREv/aAAwDAQACEQMRAD8AeLJsZL8RCPMtD6lgA+El2wkLsbkNk9LjXvJoQ5NF0HT/2Q==",
     badge: "VIBRANT STUDENT COMMUNITY",
     hindiHeadline: "खेलकूद, शारीरिक दक्षता एवं राष्ट्रीय चेतना।",
     englishTitle: "Shaping Tomorrow's Leaders Today.",
@@ -92,6 +97,7 @@ const HERO_SLIDES: HeroSlide[] = [
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [loadedSlides, setLoadedSlides] = useState<Record<string, boolean>>({});
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
@@ -155,7 +161,7 @@ export default function HeroCarousel() {
   return (
     <section
       aria-label="CGS Mahavidyalaya Hero Showcase"
-      className="relative w-full h-[580px] sm:h-[640px] md:h-[700px] overflow-hidden bg-black select-none"
+      className="relative w-full h-[580px] sm:h-[640px] md:h-[700px] overflow-hidden bg-gradient-to-br from-[#0a1c32] via-[#0d284d] to-[#0a1c32] select-none"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -163,6 +169,7 @@ export default function HeroCarousel() {
       {/* Slides */}
       {HERO_SLIDES.map((slide, index) => {
         const isActive = index === currentSlide;
+        const isLoaded = loadedSlides[slide.id];
         return (
           <div
             key={slide.id}
@@ -171,20 +178,27 @@ export default function HeroCarousel() {
               isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
             }`}
           >
-            {/* Background Image - 100% visible, unobstructed, 4K quality */}
-            <div className="absolute inset-0">
+            {/* Background Image - Smooth progressive fade-in, unobstructed, 4K quality */}
+            <div className="absolute inset-0 overflow-hidden">
               <Image
                 src={slide.image}
                 alt={slide.englishTitle}
                 fill
                 priority={index === 0}
+                placeholder={slide.blurDataURL ? "blur" : "empty"}
+                blurDataURL={slide.blurDataURL}
                 unoptimized
                 sizes="100vw"
-                className="object-cover object-center transform scale-100 transition-transform duration-[6000ms] ease-out motion-reduce:transform-none"
+                onLoad={() => setLoadedSlides((prev) => ({ ...prev, [slide.id]: true }))}
+                className={`object-cover object-center transform duration-1000 ease-out motion-reduce:transform-none ${
+                  isLoaded
+                    ? "opacity-100 scale-100 filter-none transition-[opacity,transform,filter]"
+                    : "opacity-85 scale-[1.03] blur-[2px] transition-[opacity,transform,filter]"
+                }`}
               />
               {/* Subtle natural shadow vignette to make text pop while keeping 100% of the image visible */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/25" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/25 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent pointer-events-none" />
             </div>
 
             {/* Slide Content - Sits directly on top of the image with NO enclosing box */}
