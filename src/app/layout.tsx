@@ -87,9 +87,9 @@ export default function RootLayout({
   return (
     <html
       lang="hi"
-      className={`${playfair.variable} ${jakarta.variable} ${devanagari.variable} scroll-smooth`}
+      className={`${playfair.variable} ${jakarta.variable} ${devanagari.variable} scroll-smooth overflow-x-hidden w-full max-w-full`}
     >
-      <body className="min-h-screen flex flex-col bg-[#f8f9ff] text-[#121c2a] font-sans antialiased selection:bg-[#d5ad55]/30 selection:text-[#002550]">
+      <body className="min-h-screen flex flex-col bg-[#f8f9ff] text-[#121c2a] font-sans antialiased selection:bg-[#d5ad55]/30 selection:text-[#002550] overflow-x-hidden w-full max-w-full relative">
         <EnquiryModalProvider>
           <Header />
           <main className="flex-1 flex flex-col">

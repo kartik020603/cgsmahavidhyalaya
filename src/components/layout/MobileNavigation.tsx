@@ -27,15 +27,16 @@ import { cn } from "@/lib/utils";
 export default function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isTeamExpanded, setIsTeamExpanded] = useState(true);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const pathname = usePathname();
   const { openEnquiryModal } = useEnquiryModal();
 
-  // Close drawer on path change
+  // Close drawer immediately on route change
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
-  // Lock body scroll when mobile menu is open
+  // Lock body scroll only when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -46,6 +47,23 @@ export default function MobileNavigation() {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
+
+  // Handle right swipe to close the drawer
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX;
+    if (deltaX > 45) {
+      // Swiped right -> close drawer
+      setIsOpen(false);
+    }
+    setTouchStartX(null);
+  };
+
+  const closeMenu = () => setIsOpen(false);
 
   const teamSublinks = [
     { label: "Our Team Overview", href: "/our-team", role: "समस्त प्रबंधन मंडल" },
@@ -67,23 +85,27 @@ export default function MobileNavigation() {
         <Menu className="w-6 h-6 text-[#002550]" />
       </button>
 
-      {/* Drawer Overlay */}
+      {/* Drawer Overlay Backdrop */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-[#0a1c32]/75 backdrop-blur-sm z-[99] transition-opacity"
-          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 bg-[#0a1c32]/75 backdrop-blur-xs z-[99] transition-opacity"
+          onClick={closeMenu}
           aria-hidden="true"
         />
       )}
 
-      {/* Drawer Container (Full Height 100dvh with smooth scrolling) */}
+      {/* Drawer Container (Strictly invisible & non-scrollable when closed) */}
       <div
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
         className={cn(
-          "fixed top-0 right-0 bottom-0 h-screen h-[100dvh] max-h-[100dvh] w-[88%] max-w-[360px] bg-white z-[100] shadow-2xl flex flex-col justify-between transition-transform duration-300 ease-out transform",
-          isOpen ? "translate-x-0" : "translate-x-full"
+          "fixed top-0 right-0 bottom-0 h-screen h-[100dvh] max-h-[100dvh] w-[88%] max-w-[360px] bg-white z-[100] flex flex-col justify-between transition-all duration-300 ease-out",
+          isOpen
+            ? "translate-x-0 opacity-100 visible pointer-events-auto shadow-2xl"
+            : "translate-x-full opacity-0 invisible pointer-events-none shadow-none"
         )}
         role="dialog"
-        aria-modal="true"
+        aria-modal={isOpen}
         aria-label="Mobile Navigation Drawer"
       >
         {/* Drawer Header */}
@@ -102,7 +124,7 @@ export default function MobileNavigation() {
 
           <button
             type="button"
-            onClick={() => setIsOpen(false)}
+            onClick={closeMenu}
             className="flex items-center justify-center w-9 h-9 text-[#43474f] hover:text-[#002550] hover:bg-[#e6eeff] rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#d5ad55]"
             aria-label="Close navigation menu"
           >
@@ -115,6 +137,7 @@ export default function MobileNavigation() {
           {/* Home */}
           <Link
             href="/"
+            onClick={closeMenu}
             className={cn(
               "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
               pathname === "/"
@@ -129,6 +152,7 @@ export default function MobileNavigation() {
           {/* About Us */}
           <Link
             href="/about-us"
+            onClick={closeMenu}
             className={cn(
               "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
               pathname === "/about-us"
@@ -140,7 +164,7 @@ export default function MobileNavigation() {
             <span>About Us (महाविद्यालय परिचय)</span>
           </Link>
 
-          {/* Our Team & Leadership Messages (Expanded by default for immediate visibility) */}
+          {/* Our Team & Leadership Messages */}
           <div className="rounded-lg bg-[#f8f9ff]/70 border border-[#e6eeff] overflow-hidden">
             <button
               type="button"
@@ -172,6 +196,7 @@ export default function MobileNavigation() {
                     <Link
                       key={sub.href}
                       href={sub.href}
+                      onClick={closeMenu}
                       className={cn(
                         "flex items-center justify-between px-2.5 py-2 rounded-md text-xs transition-colors",
                         isCurrent
@@ -194,6 +219,7 @@ export default function MobileNavigation() {
           {/* Photo Gallery */}
           <Link
             href="/photo-gallery"
+            onClick={closeMenu}
             className={cn(
               "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
               pathname === "/photo-gallery"
@@ -208,6 +234,7 @@ export default function MobileNavigation() {
           {/* Contact Us */}
           <Link
             href="/contact-us"
+            onClick={closeMenu}
             className={cn(
               "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
               pathname === "/contact-us"
@@ -224,7 +251,7 @@ export default function MobileNavigation() {
             <button
               type="button"
               onClick={() => {
-                setIsOpen(false);
+                closeMenu();
                 openEnquiryModal();
               }}
               className="w-full py-2.5 px-4 bg-gradient-to-r from-[#d5ad55] to-[#ebc167] text-[#0a1c32] font-bold text-xs rounded-lg shadow-md uppercase tracking-wider hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
@@ -250,7 +277,7 @@ export default function MobileNavigation() {
           </div>
         </div>
 
-        {/* Drawer Footer Actions (Always visible at bottom) */}
+        {/* Drawer Footer Actions */}
         <div className="p-3 border-t border-[#e6eeff] bg-[#f8f9ff] shrink-0 space-y-2">
           <div className="flex items-center gap-1.5 text-[11px] text-[#43474f]">
             <MapPin className="w-3.5 h-3.5 text-[#d5ad55] shrink-0" />
@@ -260,6 +287,7 @@ export default function MobileNavigation() {
           <div className="grid grid-cols-2 gap-2">
             <a
               href={COLLEGE_INFO.contact.phoneTel}
+              onClick={closeMenu}
               className="flex items-center justify-center gap-1.5 py-2 bg-[#002550] hover:bg-[#123b70] text-white rounded-lg text-xs font-semibold transition-colors shadow-xs"
             >
               <Phone className="w-3.5 h-3.5 text-[#ffdf9e]" />
@@ -268,6 +296,7 @@ export default function MobileNavigation() {
 
             <a
               href={getWhatsAppUrl()}
+              onClick={closeMenu}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-1.5 py-2 bg-[#25D366] hover:bg-[#1ebd59] text-white rounded-lg text-xs font-semibold transition-colors shadow-xs"
