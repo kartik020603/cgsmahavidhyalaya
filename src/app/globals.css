@@ -140,6 +140,23 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Hero Image Loading Bar Animation */
+@keyframes heroProgressShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-hero-progress {
+  animation: heroProgressShimmer 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 /* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

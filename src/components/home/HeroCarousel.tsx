@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, Pause, Play, ShieldCheck, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Pause, Play, ShieldCheck, ArrowRight, Loader2 } from "lucide-react";
 
 export interface HeroSlide {
   id: string;
@@ -158,6 +158,8 @@ export default function HeroCarousel() {
     }
   };
 
+  const isCurrentSlideLoaded = !!loadedSlides[HERO_SLIDES[currentSlide]?.id];
+
   return (
     <section
       aria-label="CGS Mahavidyalaya Hero Showcase"
@@ -166,6 +168,24 @@ export default function HeroCarousel() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
+      {/* Top Image Loading Progress Bar */}
+      <div
+        className={`absolute top-0 left-0 right-0 z-40 h-[3.5px] bg-[#0a1c32]/60 overflow-hidden transition-opacity duration-700 pointer-events-none ${
+          isCurrentSlideLoaded ? "opacity-0" : "opacity-100"
+        }`}
+        role="progressbar"
+        aria-label="Image loading from server"
+      >
+        <div className="h-full w-full bg-gradient-to-r from-transparent via-[#d5ad55] to-transparent animate-hero-progress shadow-[0_0_12px_#d5ad55]" />
+      </div>
+
+      {/* Floating Subtle Loading Status Pill */}
+      {!isCurrentSlideLoaded && (
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 z-40 inline-flex items-center gap-2 bg-[#0a1c32]/90 backdrop-blur-md border border-[#d5ad55]/40 text-[#ffdf9e] text-xs font-medium px-3.5 py-1 rounded-full shadow-2xl transition-all duration-300 pointer-events-none">
+          <Loader2 className="w-3.5 h-3.5 animate-spin text-[#d5ad55]" />
+          <span>लोड हो रहा है... / Loading image...</span>
+        </div>
+      )}
       {/* Slides */}
       {HERO_SLIDES.map((slide, index) => {
         const isActive = index === currentSlide;
