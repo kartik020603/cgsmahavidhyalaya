@@ -1,0 +1,185 @@
+export interface ManagementMember {
+  id: "prabandhak" | "ranjni" | "virat";
+  name: {
+    english: string;
+    hindi: string;
+  };
+  designation: {
+    english: string;
+    hindi: string;
+    tag: string;
+  };
+  slug: string;
+  route: string;
+  image: string;
+  shortMessage: string;
+  quote: string;
+  subtitle: {
+    english: string;
+    hindi: string;
+  };
+  overview: string;
+  fullMessage: string[];
+  keyPillars: {
+    title: string;
+    hindiTitle: string;
+    description: string;
+    icon: string;
+  }[];
+  signaturePlaceholder?: string;
+  boardRole: string;
+}
+
+export const MANAGEMENT_PROFILES: Record<"prabandhak" | "ranjni" | "virat", ManagementMember> = {
+  prabandhak: {
+    id: "prabandhak",
+    name: {
+      english: "Hariom Chaudhary",
+      hindi: "श्री हरिओम चौधरी",
+    },
+    designation: {
+      english: "Prabandhak (Manager)",
+      hindi: "प्रबंधक",
+      tag: "PRABANDHAK",
+    },
+    slug: "prabandhak",
+    route: "/our-team/prabandhak",
+    image: "/images/management/hariom-chaudhary.jpg",
+    boardRole: "CGS Mahavidyalaya Management Board",
+    shortMessage: "शिक्षा केवल ज्ञान प्राप्त करने का माध्यम नहीं, बल्कि अपने व्यक्तित्व और भविष्य को बेहतर बनाने की यात्रा भी है।",
+    quote: "“प्रिय विद्यार्थियों, शिक्षा केवल ज्ञान प्राप्त करने का माध्यम नहीं, बल्कि अपने व्यक्तित्व और भविष्य को बेहतर बनाने की यात्रा भी है। निरंतर सीखते रहें, अनुशासन बनाए रखें और अपने सपनों को पूरा करने के लिए समर्पित रहें।”",
+    subtitle: {
+      english: "A Message of Purpose, Discipline and Institutional Vision",
+      hindi: "अनुशासन, समर्पण और भविष्य निर्माण की दिशा में एक संदेश",
+    },
+    overview: "हमारा निरंतर ध्येय यह सुनिश्चित करना है कि ग्रामीण एवं उपनगरीय क्षेत्र के प्रत्येक छात्र को आधुनिक संसाधन, समृद्ध पुस्तकालय, अनुशासित वातावरण और उच्च नैतिक मूल्य सुलभ हों।",
+    fullMessage: [
+      "चौधरी गुलाब सिंह महाविद्यालय की स्थापना का मूल उद्देश्य ग्रामीण एवं उपनगरीय अंचल में गुणवत्तापूर्ण और मूल्यपरक उच्च शिक्षा की पहुंच को सुगम बनाना रहा है। हमारा विश्वास है कि सच्ची शिक्षा केवल किताबी ज्ञान तक सीमित नहीं होती, अपितु वह विद्यार्थी के चरित्र निर्माण, चिंतन शक्ति और सामाजिक उत्तरदायित्व को परिपक्व करती है।",
+      "महाविद्यालय परिसर में हम एक ऐसा वातावरण उपलब्ध कराने के लिए कटिबद्ध हैं जहां अनुशासन, परिश्रम और नवाचार को प्राथमिकता दी जाती है। आधुनिक प्रयोगशालाएँ, समृद्ध पुस्तकालय एवं समर्पित प्राध्यापकों की देखरेख में हमारे विद्यार्थी न केवल शैक्षणिक उत्कृष्टता हासिल कर रहे हैं, बल्कि आत्मनिर्भर नागरिक के रूप में भी उभर रहे हैं।",
+      "मैं सभी विद्यार्थियों से आह्वान करता हूँ कि वे अपने अध्ययन के प्रत्येक क्षण का सदुपयोग करें, अपनी सीमाओं का विस्तार करें और राष्ट्र निर्माण में अपना सकारात्मक योगदान दें।",
+    ],
+    keyPillars: [
+      {
+        title: "Discipline & Integrity",
+        hindiTitle: "अनुशासन एवं नैतिक सत्यनिष्ठा",
+        description: "संस्थान में समयबद्धता और उच्च नैतिक आचरण पर विशेष बल दिया जाता है।",
+        icon: "ShieldCheck",
+      },
+      {
+        title: "Accessible Excellence",
+        hindiTitle: "सुलभ गुणवत्तापूर्ण शिक्षा",
+        description: "हर पृष्ठभूमि के मेधावी छात्र के लिए आधुनिक शैक्षणिक अवसर सुलभ कराना।",
+        icon: "GraduationCap",
+      },
+      {
+        title: "Community Growth",
+        hindiTitle: "सामाजिक उत्थान",
+        description: "क्षेत्र के युवाओं को जागरूक, स्वावलंबी और सक्षम नागरिक बनाना।",
+        icon: "Users",
+      },
+    ],
+    signaturePlaceholder: "Hariom Chaudhary",
+  },
+
+  ranjni: {
+    id: "ranjni",
+    name: {
+      english: "Ranjni Chaudhary",
+      hindi: "श्रीमती रंजनी चौधरी",
+    },
+    designation: {
+      english: "Director",
+      hindi: "निदेशक",
+      tag: "DIRECTOR",
+    },
+    slug: "ranjni",
+    route: "/our-team/ranjni",
+    image: "/images/management/ranjni-chaudhary.jpg",
+    boardRole: "Academic Excellence & Cultural Development",
+    shortMessage: "हर विद्यार्थी में कुछ नया सीखने और आगे बढ़ने की क्षमता होती है। जिज्ञासा और सकारात्मक सोच के साथ आगे बढ़ें।",
+    quote: "“प्रिय विद्यार्थियों, हर विद्यार्थी में कुछ नया सीखने और आगे बढ़ने की क्षमता होती है। जिज्ञासा, निरंतर प्रयास और सकारात्मक सोच के साथ अपने लक्ष्यों की ओर बढ़ें। हमारा उद्देश्य आपके सीखने के सफर को प्रेरणादायक बनाना है।”",
+    subtitle: {
+      english: "Nurturing Curiosity, Women Empowerment and Cultural Enrichment",
+      hindi: "जिज्ञासा, महिला सशक्तीकरण और सांस्कृतिक चेतना का संवर्धन",
+    },
+    overview: "महिला सशक्तीकरण, सामाजिक चेतना और उच्च मानवीय मूल्यों का संचार हमारे शैक्षणिक सिद्धांतों के मूल केंद्र में है। प्रत्येक विद्यार्थी को अपनी अंतर्निहित प्रतिभा पहचानने का खुला मंच मिलना चाहिए।",
+    fullMessage: [
+      "शिक्षा एक ऐसी ज्योति है जो अंधकार को मिटाकर सकारात्मक परिवर्तन का मार्ग प्रशस्त करती है। चौधरी गुलाब सिंह महाविद्यालय में हमारी प्राथमिकता है कि छात्राओं और छात्रों दोनों को समान सम्मान, सुरक्षा और सशक्त शैक्षणिक मंच मिले।",
+      "हम पाठ्यक्रम के साथ-साथ सह-पाठ्यक्रम गतिविधियों, कला, वाद-विवाद, और सांस्कृतिक कार्यक्रमों को बढ़ावा देते हैं, ताकि विद्यार्थी आत्मविश्वास के साथ मंच पर अपनी बात रख सकें और भावनात्मक रूप से सुदृढ़ बनें।",
+      "सकारात्मक सोच और निरंतर अभ्यास से कोई भी लक्ष्य कठिन नहीं रहता। हमारी पूरी फैकल्टी और प्रबंधन आपके शैक्षणिक स्वप्नों को साकार करने के लिए आपके साथ तत्पर है।",
+    ],
+    keyPillars: [
+      {
+        title: "Holistic Development",
+        hindiTitle: "समग्र व्यक्तित्व विकास",
+        description: "कला, संस्कृति और विचार गोष्ठियों के माध्यम से सर्वांगीण विकास।",
+        icon: "Sparkles",
+      },
+      {
+        title: "Women Empowerment",
+        hindiTitle: "महिला सशक्तीकरण",
+        description: "छात्राओं की उच्च शिक्षा, सुरक्षा एवं आत्मनिर्भरता को विशेष प्रोत्साहन।",
+        icon: "HeartHandshake",
+      },
+      {
+        title: "Empathetic Mentorship",
+        hindiTitle: "स्नेहपूर्ण मार्गदर्शन",
+        description: "छात्रों की व्यक्तिगत जिज्ञासाओं और कठिनाइयों का समाधान।",
+        icon: "Award",
+      },
+    ],
+    signaturePlaceholder: "Ranjni Chaudhary",
+  },
+
+  virat: {
+    id: "virat",
+    name: {
+      english: "Virat Chaudhary",
+      hindi: "श्री विराट चौधरी",
+    },
+    designation: {
+      english: "Director",
+      hindi: "निदेशक",
+      tag: "DIRECTOR",
+    },
+    slug: "virat",
+    route: "/our-team/virat",
+    image: "/images/management/virat-chaudhary.jpg",
+    boardRole: "CGS Mahavidyalaya Executive Board & Innovation",
+    shortMessage: "अपने ज्ञान को बढ़ाना, नई क्षमताएँ विकसित करना और जिम्मेदारी के साथ आगे बढ़ना सफलता की महत्वपूर्ण नींव है।",
+    quote: "“प्रिय विद्यार्थियों, अपने ज्ञान को बढ़ाना, नई क्षमताएँ विकसित करना और जिम्मेदारी के साथ आगे बढ़ना सफलता की महत्वपूर्ण नींव है। सीखने के हर अवसर का उपयोग करें और अपने भविष्य के लिए निरंतर प्रयास करते रहें।”",
+    subtitle: {
+      english: "Empowering Minds for 21st-Century Competence, Tech & Career Readiness",
+      hindi: "21वीं सदी की तकनीकी दक्षता, नवाचार और करियर तैयारी",
+    },
+    overview: "आज का युग तकनीकी नवाचार और व्यावहारिक दक्षता का है। हमारा प्रयास है कि हमारे छात्र केवल उपाधियाँ प्राप्त न करें, बल्कि रोजगारोन्मुखी कौशल और आधुनिक सोच से लैस हों।",
+    fullMessage: [
+      "तीव्र गति से बदलती दुनिया में पारंपरिक शिक्षा के साथ आधुनिक तकनीक और व्यावहारिक कौशल का समन्वय अनिवार्य हो चुका है। चौधरी गुलाब सिंह महाविद्यालय में हम डिजिटल साक्षरता, कंप्यूटर लैब्स और करियर उन्मुखी मार्गदर्शन पर बल दे रहे हैं।",
+      "हमारा लक्ष्य है कि सादाबाद और आसपास के क्षेत्रों के विद्यार्थी किसी भी बड़े महानगर के छात्र से पीछे न रहें। उन्हें आधुनिक विश्लेषणात्मक दृष्टिकोण, संचार कौशल और समस्या समाधान की दक्षता से युक्त करना हमारी प्राथमिकता है।",
+      "कठिन परिश्रम का कोई विकल्प नहीं होता, लेकिन सही दिशा और आधुनिक तकनीकों के साथ किया गया परिश्रम निश्चित रूप से असाधारण परिणाम देता है।",
+    ],
+    keyPillars: [
+      {
+        title: "Technology & Digital Skills",
+        hindiTitle: "तकनीकी दक्षता एवं डिजिटल कौशल",
+        description: "कंप्यूटर लैब्स और आधुनिक तकनीकी साधनों द्वारा व्यावहारिक प्रशिक्षण।",
+        icon: "Laptop",
+      },
+      {
+        title: "Career & Competitive Guidance",
+        hindiTitle: "करियर एवं प्रतियोगी मार्गदर्शन",
+        description: "उच्च शिक्षा के पश्चात रोजगार और प्रतियोगी परीक्षाओं हेतु परामर्श।",
+        icon: "Compass",
+      },
+      {
+        title: "Critical Thinking",
+        hindiTitle: "विश्लेषणात्मक चिंतन",
+        description: "समस्या समाधान और 21वीं सदी की आवश्यकताओं के अनुरूप तैयारी।",
+        icon: "Lightbulb",
+      },
+    ],
+    signaturePlaceholder: "Virat Chaudhary",
+  },
+};
+
+export const MANAGEMENT_LIST = Object.values(MANAGEMENT_PROFILES);

@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Radial and Linear Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF2B5" />
+      <stop offset="35%" stop-color="#D5AD55" />
+      <stop offset="70%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#FDF2B5" />
+    </linearGradient>
+
+    <linearGradient id="goldGradSoft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EBC167" />
+      <stop offset="100%" stop-color="#B38600" />
+    </linearGradient>
+
+    <radialGradient id="navyBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0F2B5C" />
+      <stop offset="75%" stop-color="#002550" />
+      <stop offset="100%" stop-color="#08162B" />
+    </radialGradient>
+
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+
+    <!-- Text Paths for Circular Arcs -->
+    <!-- Top Arc (Clockwise for readable Hindi text) -->
+    <path id="topTextArc" d="M 65 250 A 185 185 0 0 1 435 250" fill="none" />
+    <!-- Bottom Arc (Clockwise for readable English text) -->
+    <path id="bottomTextArc" d="M 435 250 A 185 185 0 0 1 65 250" fill="none" />
+  </defs>
+
+  <!-- Outer Ornamental Ring -->
+  <circle cx="250" cy="250" r="242" fill="url(#navyBg)" stroke="url(#goldGrad)" stroke-width="6" />
+  
+  <!-- Outer Beaded Pattern -->
+  <circle cx="250" cy="250" r="230" fill="none" stroke="#D5AD55" stroke-width="1.5" stroke-dasharray="4,6" />
+
+  <!-- Mid Ring Banner for College Title -->
+  <circle cx="250" cy="250" r="218" fill="none" stroke="url(#goldGrad)" stroke-width="4" />
+  <circle cx="250" cy="250" r="158" fill="none" stroke="url(#goldGrad)" stroke-width="4" />
+
+  <!-- Hindi College Name on Top Arc -->
+  <text font-family="'Noto Serif Devanagari', 'Mangal', 'Georgia', serif" font-weight="700" font-size="25" fill="#FFFFFF" letter-spacing="1.5">
+    <textPath href="#topTextArc" startOffset="50%" text-anchor="middle">
+      चौधरी गुलाब सिंह महाविद्यालय
+    </textPath>
+  </text>
+
+  <!-- English College Name & Location on Bottom Arc -->
+  <text font-family="'Plus Jakarta Sans', 'Arial', sans-serif" font-weight="700" font-size="18.5" fill="#FFDF9E" letter-spacing="2">
+    <textPath href="#bottomTextArc" startOffset="50%" text-anchor="middle">
+      ★ CGS MAHAVIDYALAYA • SADABAD ★
+    </textPath>
+  </text>
+
+  <!-- Inner Center Circle -->
+  <circle cx="250" cy="250" r="148" fill="#002550" stroke="#D5AD55" stroke-width="2.5" />
+
+  <!-- Center Decorative Sunburst Rays -->
+  <g opacity="0.3" stroke="#D5AD55" stroke-width="1.5">
+    <line x1="250" y1="110" x2="250" y2="135" />
+    <line x1="250" y1="365" x2="250" y2="390" />
+    <line x1="110" y1="250" x2="135" y2="250" />
+    <line x1="365" y1="250" x2="390" y2="250" />
+    <line x1="151" y1="151" x2="168" y2="168" />
+    <line x1="349" y1="349" x2="332" y2="332" />
+    <line x1="349" y1="151" x2="332" y2="168" />
+    <line x1="151" y1="349" x2="168" y2="332" />
+  </g>
+
+  <!-- Center Emblem Graphics -->
+  <g filter="url(#goldGlow)">
+    <!-- Rising Sun over Book of Knowledge -->
+    <path d="M 200 205 C 200 170, 300 170, 300 205 Z" fill="url(#goldGradSoft)" />
+    <!-- Sunrays emanating upward -->
+    <path d="M 250 160 L 250 142 M 225 168 L 213 152 M 275 168 L 287 152 M 205 185 L 190 178 M 295 185 L 310 178" stroke="#FFE79A" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Open Book of Knowledge -->
+    <!-- Left Page -->
+    <path d="M 250 240 C 220 225, 175 228, 155 240 L 155 285 C 175 273, 220 270, 250 285 Z" fill="#FAFAF7" stroke="#002550" stroke-width="2" />
+    <!-- Right Page -->
+    <path d="M 250 240 C 280 225, 325 228, 345 240 L 345 285 C 325 273, 280 270, 250 285 Z" fill="#FAFAF7" stroke="#002550" stroke-width="2" />
+    <!-- Book Spine & Binding -->
+    <path d="M 250 240 L 250 285" stroke="#D5AD55" stroke-width="3" />
+    <!-- Book Page Lines -->
+    <line x1="175" y1="250" x2="235" y2="242" stroke="#4F5F78" stroke-width="1.5" />
+    <line x1="175" y1="260" x2="235" y2="252" stroke="#4F5F78" stroke-width="1.5" />
+    <line x1="175" y1="270" x2="235" y2="262" stroke="#4F5F78" stroke-width="1.5" />
+    <line x1="325" y1="250" x2="265" y2="242" stroke="#4F5F78" stroke-width="1.5" />
+    <line x1="325" y1="260" x2="265" y2="252" stroke="#4F5F78" stroke-width="1.5" />
+    <line x1="325" y1="270" x2="265" y2="262" stroke="#4F5F78" stroke-width="1.5" />
+
+    <!-- Academic Torch / Flame of Enlightenment -->
+    <path d="M 250 185 C 242 205, 258 215, 250 232 C 242 215, 258 205, 250 185 Z" fill="#FF4D15" />
+    <path d="M 250 193 C 245 205, 255 212, 250 224 C 245 212, 255 205, 250 193 Z" fill="#FFC837" />
+
+    <!-- Laurel / Wheat Wreath flanking the book -->
+    <!-- Left Wreath -->
+    <path d="M 150 285 C 135 250, 145 200, 180 180" fill="none" stroke="url(#goldGrad)" stroke-width="3.5" stroke-linecap="round" />
+    <circle cx="145" cy="265" r="4" fill="#D5AD55" />
+    <circle cx="142" cy="240" r="4" fill="#D5AD55" />
+    <circle cx="148" cy="215" r="4" fill="#D5AD55" />
+    <circle cx="162" cy="195" r="4" fill="#D5AD55" />
+
+    <!-- Right Wreath -->
+    <path d="M 350 285 C 365 250, 355 200, 320 180" fill="none" stroke="url(#goldGrad)" stroke-width="3.5" stroke-linecap="round" />
+    <circle cx="355" cy="265" r="4" fill="#D5AD55" />
+    <circle cx="358" cy="240" r="4" fill="#D5AD55" />
+    <circle cx="352" cy="215" r="4" fill="#D5AD55" />
+    <circle cx="338" cy="195" r="4" fill="#D5AD55" />
+
+    <!-- Foundation Ribbon / Banner with Motto -->
+    <path d="M 160 315 L 250 305 L 340 315 L 325 335 L 250 325 L 175 335 Z" fill="#0F2B5C" stroke="url(#goldGrad)" stroke-width="2" />
+    <text x="250" y="321" font-family="'Noto Serif Devanagari', 'Mangal', serif" font-weight="700" font-size="13" fill="#FFEAA7" text-anchor="middle">
+      ज्ञानम् • संस्कारम् • सफलता
+    </text>
+  </g>
+</svg>
