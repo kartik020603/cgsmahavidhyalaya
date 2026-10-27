@@ -8,7 +8,7 @@ import { MANAGEMENT_LIST, ManagementMember } from "@/data/management";
 import { cn } from "@/lib/utils";
 
 export default function ManagementMessageSwitcher() {
-  const [selectedId, setSelectedId] = useState<"prabandhak" | "ranjni" | "virat">("prabandhak");
+  const [selectedId, setSelectedId] = useState<ManagementMember["id"]>("prabandhak");
 
   const current: ManagementMember =
     MANAGEMENT_LIST.find((m) => m.id === selectedId) || MANAGEMENT_LIST[0];

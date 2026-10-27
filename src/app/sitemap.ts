@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/our-team/prabandhak",
     "/our-team/ranjni",
     "/our-team/virat",
+    "/our-team/himani",
     "/photo-gallery",
     "/contact-us",
   ];

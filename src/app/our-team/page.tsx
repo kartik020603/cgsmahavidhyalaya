@@ -10,7 +10,7 @@ import { COLLEGE_INFO } from "@/data/college";
 export const metadata: Metadata = {
   title: "Our Team & Leadership | प्रबंधन एवं नेतृत्व",
   description:
-    "चौधरी गुलाब सिंह महाविद्यालय के सम्मानित प्रबंधन एवं नेतृत्व से मिलें — श्री हरिओम चौधरी (प्रबंधक), श्रीमती रंजनी चौधरी (निदेशक), श्री विराट चौधरी (निदेशक)।",
+    "चौधरी गुलाब सिंह महाविद्यालय के सम्मानित प्रबंधन एवं नेतृत्व से मिलें — श्री हरिओम चौधरी (प्रबंधक), श्रीमती रंजनी चौधरी (निदेशक), श्री विराट चौधरी (निदेशक), श्रीमती हिमानी चौधरी (उप-प्राचार्या)।",
 };
 
 export default function OurTeamPage() {
@@ -45,8 +45,8 @@ export default function OurTeamPage() {
           </p>
         </div>
 
-        {/* 3 Leadership Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 4 Leadership Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {MANAGEMENT_LIST.map((member) => (
             <ManagementProfileCard key={member.id} member={member} />
           ))}

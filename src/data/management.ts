@@ -1,5 +1,5 @@
 export interface ManagementMember {
-  id: "prabandhak" | "ranjni" | "virat";
+  id: "prabandhak" | "ranjni" | "virat" | "himani";
   name: {
     english: string;
     hindi: string;
@@ -30,7 +30,7 @@ export interface ManagementMember {
   boardRole: string;
 }
 
-export const MANAGEMENT_PROFILES: Record<"prabandhak" | "ranjni" | "virat", ManagementMember> = {
+export const MANAGEMENT_PROFILES: Record<"prabandhak" | "ranjni" | "virat" | "himani", ManagementMember> = {
   prabandhak: {
     id: "prabandhak",
     name: {
@@ -179,6 +179,56 @@ export const MANAGEMENT_PROFILES: Record<"prabandhak" | "ranjni" | "virat", Mana
       },
     ],
     signaturePlaceholder: "Virat Chaudhary",
+  },
+
+  himani: {
+    id: "himani",
+    name: {
+      english: "Himani Chaudhary",
+      hindi: "श्रीमती हिमानी चौधरी",
+    },
+    designation: {
+      english: "Vice Principal",
+      hindi: "उप-प्राचार्या",
+      tag: "VICE PRINCIPAL",
+    },
+    slug: "himani",
+    route: "/our-team/himani",
+    image: "/images/management/himani-chaudhary.jpg",
+    boardRole: "Academic Administration & Student Affairs",
+    shortMessage: "अनुशासन, नियमित अध्ययन और सकारात्मक दृष्टिकोण ही जीवन में वास्तविक सफलता की कुंजी है।",
+    quote: "“प्रिय विद्यार्थियों, अनुशासन, नियमित अध्ययन और सकारात्मक दृष्टिकोण ही जीवन में वास्तविक सफलता की कुंजी है। अपने शिक्षकों के मार्गदर्शन में ज्ञान अर्जित करें और अपने लक्ष्यों की प्राप्ति हेतु निरंतर समर्पित रहें।”",
+    subtitle: {
+      english: "Excellence in Academic Discipline, Student Guidance & Ethical Leadership",
+      hindi: "शैक्षणिक अनुशासन, छात्र मार्गदर्शन एवं चारित्रिक निर्माण का संदेश",
+    },
+    overview: "महाविद्यालय में शैक्षणिक गुणवत्ता, कक्षा अनुशासन एवं विद्यार्थियों के समग्र व्यक्तित्व विकास को सुनिश्चित करना हमारी सर्वोच्च प्राथमिकता है।",
+    fullMessage: [
+      "चौधरी गुलाब सिंह महाविद्यालय में हम प्रत्येक विद्यार्थी को शैक्षणिक ज्ञान के साथ-साथ नैतिक मूल्यों और अनुशासन से सुसज्जित करने के लिए निरंतर प्रयासरत हैं। एक आदर्श शैक्षणिक संस्थान वह होता है जहाँ विद्यार्थियों को निर्भीक होकर प्रश्न पूछने, अपनी प्रतिभा को निखारने और लक्ष्य प्राप्ति हेतु अनुकूल वातावरण प्राप्त हो।",
+      "उप-प्राचार्या के रूप में मेरी यह प्रतिबद्धता है कि हमारे प्राध्यापक और छात्र एक परिवार की तरह मिलकर शैक्षणिक उत्कृष्टता के नए प्रतिमान स्थापित करें। नियमित कक्षाएं, समयबद्ध परीक्षा प्रणाली, और छात्रों की व्यक्तिगत समस्याओं का समाधान हमारी प्राथमिकताओं में शामिल हैं।",
+      "मैं सभी विद्यार्थियों से कहना चाहती हूँ कि समय अत्यंत मूल्यवान है। अपने अध्ययन के प्रति निष्ठावान रहें, कॉलेज की समृद्ध सुविधाओं का पूरा लाभ उठाएं और अपने गुरुजनों व माता-पिता का नाम रोशन करें।",
+    ],
+    keyPillars: [
+      {
+        title: "Academic Discipline",
+        hindiTitle: "शैक्षणिक अनुशासन",
+        description: "नियमित उपस्थिति, समयबद्ध अध्ययन एवं परीक्षा में उत्कृष्ट प्रदर्शन।",
+        icon: "BookOpen",
+      },
+      {
+        title: "Student Mentorship",
+        hindiTitle: "छात्र मार्गदर्शन",
+        description: "विद्यार्थियों के व्यक्तिगत व शैक्षणिक विकास हेतु सतत परामर्श।",
+        icon: "HeartHandshake",
+      },
+      {
+        title: "Value-Based Education",
+        hindiTitle: "संस्कारयुक्त शिक्षा",
+        description: "ज्ञान के साथ-साथ उच्च मानवीय एवं नैतिक मूल्यों का बीजारोपण।",
+        icon: "Award",
+      },
+    ],
+    signaturePlaceholder: "Himani Chaudhary",
   },
 };
 

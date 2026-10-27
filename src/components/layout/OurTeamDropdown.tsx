@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, UserCheck, Sparkles, Laptop } from "lucide-react";
+import { ChevronDown, UserCheck, Sparkles, Laptop, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const TEAM_LINKS = [
@@ -34,6 +34,13 @@ const TEAM_LINKS = [
     href: "/our-team/virat",
     description: "Virat Chaudhary — 21st-Century Competence",
     icon: Laptop,
+  },
+  {
+    label: "Himani Chaudhary's Message",
+    hindiLabel: "उप-प्राचार्या का संदेश (हिमानी चौधरी)",
+    href: "/our-team/himani",
+    description: "Himani Chaudhary — Academic Discipline & Values",
+    icon: BookOpen,
   },
 ];
 

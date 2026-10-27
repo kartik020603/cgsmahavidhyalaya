@@ -87,6 +87,12 @@ export const COLLEGE_INFO = {
           href: "/our-team/virat",
           description: "श्री विराट चौधरी — निदेशक",
         },
+        {
+          label: "Himani Chaudhary's Message",
+          hindiLabel: "उप-प्राचार्या का संदेश (हिमानी चौधरी)",
+          href: "/our-team/himani",
+          description: "श्रीमती हिमानी चौधरी — उप-प्राचार्या",
+        },
       ],
     },
     { label: "Photo Gallery", hindiLabel: "फोटो गैलरी", href: "/photo-gallery" },

@@ -70,6 +70,7 @@ export default function MobileNavigation() {
     { label: "Prabandhak's Message", href: "/our-team/prabandhak", role: "श्री हरिओम चौधरी (प्रबंधक)" },
     { label: "Ranjni Chaudhary's Message", href: "/our-team/ranjni", role: "श्रीमती रंजनी चौधरी (निदेशक)" },
     { label: "Virat Chaudhary's Message", href: "/our-team/virat", role: "श्री विराट चौधरी (निदेशक)" },
+    { label: "Himani Chaudhary's Message", href: "/our-team/himani", role: "श्रीमती हिमानी चौधरी (उप-प्राचार्या)" },
   ];
 
   return (
