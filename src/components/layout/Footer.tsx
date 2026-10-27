@@ -173,6 +173,20 @@ export default function Footer() {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/our-team/nishu"
+                  className="group block p-2 rounded hover:bg-[#123b70]/40 transition-colors"
+                >
+                  <div className="font-medium text-white group-hover:text-[#ffdf9e] flex items-center gap-1.5">
+                    <GraduationCap className="w-3.5 h-3.5 text-[#d5ad55]" />
+                    <span>श्री नीशू चौधरी</span>
+                  </div>
+                  <span className="text-[11px] text-[#ffdf9e]/80 block ml-5">
+                    प्रबंध निदेशक का संदेश (MD&apos;s Message)
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
 

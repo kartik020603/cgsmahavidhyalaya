@@ -1,5 +1,5 @@
 export interface ManagementMember {
-  id: "prabandhak" | "ranjni" | "virat" | "himani";
+  id: "prabandhak" | "ranjni" | "virat" | "himani" | "nishu";
   name: {
     english: string;
     hindi: string;
@@ -30,7 +30,7 @@ export interface ManagementMember {
   boardRole: string;
 }
 
-export const MANAGEMENT_PROFILES: Record<"prabandhak" | "ranjni" | "virat" | "himani", ManagementMember> = {
+export const MANAGEMENT_PROFILES: Record<"prabandhak" | "ranjni" | "virat" | "himani" | "nishu", ManagementMember> = {
   prabandhak: {
     id: "prabandhak",
     name: {
@@ -229,6 +229,56 @@ export const MANAGEMENT_PROFILES: Record<"prabandhak" | "ranjni" | "virat" | "hi
       },
     ],
     signaturePlaceholder: "Himani Chaudhary",
+  },
+
+  nishu: {
+    id: "nishu",
+    name: {
+      english: "Nishu Chaudhary",
+      hindi: "श्री नीशू चौधरी",
+    },
+    designation: {
+      english: "Managing Director",
+      hindi: "प्रबंध निदेशक",
+      tag: "MANAGING DIRECTOR",
+    },
+    slug: "nishu",
+    route: "/our-team/nishu",
+    image: "/images/management/nishu-chaudhary.jpg",
+    boardRole: "Operational Management & Institutional Development",
+    shortMessage: "नवाचार, सुदृढ़ प्रबंधन और समर्पण के साथ हम विद्यार्थियों को श्रेष्ठतम अवसर प्रदान करने के लिए प्रतिबद्ध हैं।",
+    quote: "“प्रिय विद्यार्थियों, नवाचार, सुदृढ़ प्रबंधन और समर्पण के साथ हम विद्यार्थियों को श्रेष्ठतम अवसर प्रदान करने के लिए प्रतिबद्ध हैं। अपने संकल्प को मजबूत रखें, अवसरों का लाभ उठाएं और भविष्य की चुनौतियों के लिए स्वयं को तैयार करें।”",
+    subtitle: {
+      english: "Strategic Governance, Student Welfare & Institutional Expansion",
+      hindi: "रणनीतिक प्रबंधन, छात्र कल्याण एवं संस्थागत विकास का संदेश",
+    },
+    overview: "महाविद्यालय के सुचारू संचालन, आधुनिक संसाधनों के विस्तार और विद्यार्थियों के सर्वांगीण विकास हेतु अनुकूल वातावरण तैयार करना हमारा मुख्य लक्ष्य है।",
+    fullMessage: [
+      "चौधरी गुलाब सिंह महाविद्यालय का उद्देश्य विद्यार्थियों को केवल किताबी शिक्षा देना नहीं, अपितु उन्हें जीवन के हर क्षेत्र में नेतृत्व करने योग्य बनाना है। हमारे संस्थान में बेहतर अधोसंरचना, कुशल प्रशासनिक व्यवस्था और छात्रों की सुविधाओं का निरंतर उन्नयन किया जा रहा है।",
+      "प्रबंध निदेशक के रूप में मेरा प्रयास है कि परिसर में शिक्षा, खेल, तकनीकी प्रशिक्षण और सांस्कृतिक गतिविधियों का ऐसा संगम हो, जिससे छात्र आत्मनिर्भर और आत्मविश्वासी बन सकें। हम क्षेत्र के युवाओं को उच्च स्तरीय मार्गदर्शन उपलब्ध कराने के लिए सदैव प्रयासरत हैं।",
+      "मैं सभी विद्यार्थियों को उज्ज्वल भविष्य की शुभकामनाएं देता हूँ और उनसे आग्रह करता हूँ कि वे लगन और ईमानदारी के साथ अपने लक्ष्यों को प्राप्त करें।",
+    ],
+    keyPillars: [
+      {
+        title: "Strategic Governance",
+        hindiTitle: "रणनीतिक प्रबंधन",
+        description: "संस्थान के समग्र संचालन में पारदर्शिता, गतिशीलता और उत्कृष्टता।",
+        icon: "Briefcase",
+      },
+      {
+        title: "Modern Infrastructure",
+        hindiTitle: "आधुनिक अधोसंरचना",
+        description: "विद्यार्थियों के अध्ययन एवं खेलकूद हेतु विश्वस्तरीय सुविधाओं का विस्तार।",
+        icon: "Building2",
+      },
+      {
+        title: "Youth Empowerment",
+        hindiTitle: "युवा सशक्तीकरण",
+        description: "आत्मविश्वास, कौशल विकास और स्वावलंबन को सर्वोच्च प्राथमिकता।",
+        icon: "TrendingUp",
+      },
+    ],
+    signaturePlaceholder: "Nishu Chaudhary",
   },
 };
 

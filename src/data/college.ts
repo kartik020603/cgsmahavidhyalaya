@@ -93,6 +93,12 @@ export const COLLEGE_INFO = {
           href: "/our-team/himani",
           description: "श्रीमती हिमानी चौधरी — उप-प्राचार्या",
         },
+        {
+          label: "Nishu Chaudhary's Message",
+          hindiLabel: "प्रबंध निदेशक का संदेश (नीशू चौधरी)",
+          href: "/our-team/nishu",
+          description: "श्री नीशू चौधरी — प्रबंध निदेशक",
+        },
       ],
     },
     { label: "Photo Gallery", hindiLabel: "फोटो गैलरी", href: "/photo-gallery" },
