@@ -99,6 +99,18 @@ export const COLLEGE_INFO = {
           href: "/our-team/nishu",
           description: "श्री नीशू चौधरी — प्रबंध निदेशक",
         },
+        {
+          label: "Mauli Chaudhary's Message",
+          hindiLabel: "मौलि चौधरी का संदेश (नन्ही प्रेरणा)",
+          href: "/our-team/mauli",
+          description: "मौलि चौधरी — नन्ही प्रेरणा",
+        },
+        {
+          label: "Kashi Chaudhary's Message",
+          hindiLabel: "काशी चौधरी का संदेश (नन्ही प्रेरणा)",
+          href: "/our-team/kashi",
+          description: "काशी चौधरी — नन्ही प्रेरणा",
+        },
       ],
     },
     { label: "Photo Gallery", hindiLabel: "फोटो गैलरी", href: "/photo-gallery" },

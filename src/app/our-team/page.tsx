@@ -4,13 +4,13 @@ import { ArrowRight, ShieldCheck, Award, HeartHandshake } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import ManagementProfileCard from "@/components/team/ManagementProfileCard";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { MANAGEMENT_LIST } from "@/data/management";
+import { EXECUTIVE_MANAGEMENT_LIST, CHILDREN_LIST } from "@/data/management";
 import { COLLEGE_INFO } from "@/data/college";
 
 export const metadata: Metadata = {
   title: "Our Team & Leadership | प्रबंधन एवं नेतृत्व",
   description:
-    "चौधरी गुलाब सिंह महाविद्यालय के सम्मानित प्रबंधन एवं नेतृत्व से मिलें — श्री हरिओम चौधरी (प्रबंधक), श्रीमती रंजनी चौधरी (निदेशक), श्री विराट चौधरी (निदेशक), श्रीमती हिमानी चौधरी (उप-प्राचार्या), श्री नीशू चौधरी (प्रबंध निदेशक)।",
+    "चौधरी गुलाब सिंह महाविद्यालय के सम्मानित प्रबंधन एवं नेतृत्व से मिलें — श्री हरिओम चौधरी (प्रबंधक), श्रीमती रंजनी चौधरी (निदेशक), श्री विराट चौधरी (निदेशक), श्रीमती हिमानी चौधरी (उप-प्राचार्या), श्री नीशू चौधरी (प्रबंध निदेशक) एवं नन्हे प्रेरणास्रोत मौलि चौधरी व काशी चौधरी।",
 };
 
 export default function OurTeamPage() {
@@ -45,11 +45,36 @@ export default function OurTeamPage() {
           </p>
         </div>
 
-        {/* Leadership Cards */}
+        {/* Executive Leadership Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {MANAGEMENT_LIST.map((member) => (
+          {EXECUTIVE_MANAGEMENT_LIST.map((member) => (
             <ManagementProfileCard key={member.id} member={member} />
           ))}
+        </div>
+
+        {/* Children's Message Section: Mauli Chaudhary & Kashi Chaudhary */}
+        <div className="mt-20 pt-14 border-t border-[#d5ad55]/30">
+          <div className="max-w-2xl mx-auto text-center mb-10 space-y-3">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#0a1c32] bg-[#d5ad55] px-4 py-1.5 rounded-full inline-block shadow-sm">
+              LITTLE STARS & FUTURE BLESSINGS
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#002550]">
+              Young Rays of Hope & Joy
+            </h3>
+            <p className="font-hindi text-base sm:text-lg text-[#123b70] font-medium">
+              हमारे परिवार के नन्हे सितारे — मौलि चौधरी एवं काशी चौधरी की निर्मल प्रेरणा
+            </p>
+            <div className="w-16 h-1 bg-[#d5ad55] mx-auto rounded-full" />
+            <p className="text-xs sm:text-sm text-[#43474f] max-w-lg mx-auto">
+              मासूमियत, खुशहाल बचपन और सांस्कृतिक संस्कारों से सजे नन्हे संदेश जो महाविद्यालय परिवार को निरंतर ऊर्जा और सकारात्मकता प्रदान करते हैं।
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {CHILDREN_LIST.map((child) => (
+              <ManagementProfileCard key={child.id} member={child} />
+            ))}
+          </div>
         </div>
 
         {/* Core Principles */}

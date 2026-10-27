@@ -72,6 +72,8 @@ export default function MobileNavigation() {
     { label: "Virat Chaudhary's Message", href: "/our-team/virat", role: "श्री विराट चौधरी (निदेशक)" },
     { label: "Himani Chaudhary's Message", href: "/our-team/himani", role: "श्रीमती हिमानी चौधरी (उप-प्राचार्या)" },
     { label: "Nishu Chaudhary's Message", href: "/our-team/nishu", role: "श्री नीशू चौधरी (प्रबंध निदेशक)" },
+    { label: "Mauli Chaudhary's Message", href: "/our-team/mauli", role: "मौलि चौधरी (नन्ही प्रेरणा)" },
+    { label: "Kashi Chaudhary's Message", href: "/our-team/kashi", role: "काशी चौधरी (नन्ही प्रेरणा)" },
   ];
 
   return (

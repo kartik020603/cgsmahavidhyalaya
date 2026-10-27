@@ -12,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/our-team/virat",
     "/our-team/himani",
     "/our-team/nishu",
+    "/our-team/mauli",
+    "/our-team/kashi",
     "/photo-gallery",
     "/contact-us",
   ];

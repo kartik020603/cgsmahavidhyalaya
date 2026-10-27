@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, UserCheck, Sparkles, Laptop, BookOpen, Briefcase } from "lucide-react";
+import { ChevronDown, UserCheck, Sparkles, Laptop, BookOpen, Briefcase, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const TEAM_LINKS = [
@@ -48,6 +48,20 @@ const TEAM_LINKS = [
     href: "/our-team/nishu",
     description: "Nishu Chaudhary — Strategic Governance & Growth",
     icon: Briefcase,
+  },
+  {
+    label: "Mauli Chaudhary's Message",
+    hindiLabel: "मौलि चौधरी का संदेश (नन्ही प्रेरणा)",
+    href: "/our-team/mauli",
+    description: "Mauli Chaudhary — Joy, Curiosity & Pure Smiles",
+    icon: Heart,
+  },
+  {
+    label: "Kashi Chaudhary's Message",
+    hindiLabel: "काशी चौधरी का संदेश (नन्ही प्रेरणा)",
+    href: "/our-team/kashi",
+    description: "Kashi Chaudhary — Cultural Roots & High Dreams",
+    icon: Sparkles,
   },
 ];
 

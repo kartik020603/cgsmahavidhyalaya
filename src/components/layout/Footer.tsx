@@ -187,6 +187,34 @@ export default function Footer() {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/our-team/mauli"
+                  className="group block p-2 rounded hover:bg-[#123b70]/40 transition-colors"
+                >
+                  <div className="font-medium text-white group-hover:text-[#ffdf9e] flex items-center gap-1.5">
+                    <GraduationCap className="w-3.5 h-3.5 text-[#d5ad55]" />
+                    <span>मौलि चौधरी</span>
+                  </div>
+                  <span className="text-[11px] text-[#ffdf9e]/80 block ml-5">
+                    नन्ही प्रेरणा का संदेश (Mauli&apos;s Message)
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/our-team/kashi"
+                  className="group block p-2 rounded hover:bg-[#123b70]/40 transition-colors"
+                >
+                  <div className="font-medium text-white group-hover:text-[#ffdf9e] flex items-center gap-1.5">
+                    <GraduationCap className="w-3.5 h-3.5 text-[#d5ad55]" />
+                    <span>काशी चौधरी</span>
+                  </div>
+                  <span className="text-[11px] text-[#ffdf9e]/80 block ml-5">
+                    नन्ही प्रेरणा का संदेश (Kashi&apos;s Message)
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
 
