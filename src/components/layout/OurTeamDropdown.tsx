@@ -53,15 +53,15 @@ const TEAM_LINKS = [
     label: "Mauli Chaudhary's Message",
     hindiLabel: "मौलि चौधरी का संदेश (नन्ही प्रेरणा)",
     href: "/our-team/mauli",
-    description: "Mauli Chaudhary — Joy, Curiosity & Pure Smiles",
-    icon: Heart,
+    description: "Mauli Chaudhary — Cultural Roots & High Dreams",
+    icon: Sparkles,
   },
   {
     label: "Kashi Chaudhary's Message",
     hindiLabel: "काशी चौधरी का संदेश (नन्ही प्रेरणा)",
     href: "/our-team/kashi",
-    description: "Kashi Chaudhary — Cultural Roots & High Dreams",
-    icon: Sparkles,
+    description: "Kashi Chaudhary — Joy, Curiosity & Pure Smiles",
+    icon: Heart,
   },
 ];
 
